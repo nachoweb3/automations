@@ -1,0 +1,86 @@
+═══════════════════════════════════════════════════════════════════
+    ÍNDICE DE WORKFLOWS N8N - 300 WORKFLOWS ORGANIZADOS
+═══════════════════════════════════════════════════════════════════
+
+📍 Ubicación: C:\Users\Usuario\Desktop\automations\organized
+
+📦 Total de workflows: 300
+📁 Categorías: 77
+
+🎯 CÓMO USAR ESTOS WORKFLOWS:
+
+1. Navega a la carpeta de la categoría que te interese
+2. Dentro de cada carpeta encontrarás:
+   - workflow.json - El archivo del workflow para importar en n8n
+   - README.txt - Documentación sobre qué hace y cómo configurarlo
+
+3. Para importar a n8n:
+   - Abre http://localhost:5678
+   - Click en el menú (☰) → "Import from File"
+   - Selecciona el archivo .json
+   - Sigue las instrucciones del README.txt para configurar
+
+═══════════════════════════════════════════════════════════════════
+    CATEGORÍAS PRINCIPALES
+═══════════════════════════════════════════════════════════════════
+
+🤖 AUTOMATIZACIÓN Y CÓDIGO
+- Automation/       - Workflows de automatización general
+- Automate/         - Procesos automatizados
+- Code/             - Scripts y código personalizado
+- Executecommand/   - Ejecución de comandos del sistema
+
+📧 COMUNICACIONES
+- Emailreadimap/    - Lectura y procesamiento de emails
+- Gmail/            - Automatización de Gmail
+- Telegram/         - Bots y automatización de Telegram
+- Slack/            - Integración con Slack
+- Discord/          - Bots de Discord
+
+🗄️ GESTIÓN DE DATOS
+- Airtable/         - Integración con Airtable
+- Postgres/         - Bases de datos PostgreSQL
+- Mysql/            - Bases de datos MySQL
+- Googlesheets/     - Automatización de Google Sheets
+
+🔄 PROCESAMIENTO
+- Split/            - División de datos
+- Merge/            - Fusión de datos
+- Loop/             - Bucles y repeticiones
+- Filter/           - Filtrado de información
+
+🌐 INTEGRACIONES WEB
+- Webhook/          - Webhooks y APIs
+- Http/             - Peticiones HTTP
+- Googleapi/        - APIs de Google
+- Openai/           - Integración con OpenAI
+
+📊 ANÁLISIS Y REPORTES
+- Generate/         - Generación de contenido
+- Manual/           - Triggers manuales
+- Schedule/         - Tareas programadas
+- Triggered/        - Eventos disparados
+
+🎨 MEDIOS Y CONTENIDO
+- Editimage/        - Edición de imágenes
+- Linkedin/         - Automatización de LinkedIn
+- Twitter/          - Bots de Twitter
+- Youtube/          - Integración con YouTube
+
+🔧 HERRAMIENTAS
+- Function/         - Funciones personalizadas
+- Set/              - Establecer variables
+- Switch/           - Condicionales
+- Wait/             - Esperas y delays
+
+═══════════════════════════════════════════════════════════════════
+    WORKFLOWS DESTACADOS
+═══════════════════════════════════════════════════════════════════
+
+Ver README.txt dentro de cada carpeta de workflow para detalles
+específicos sobre configuración y uso.
+
+═══════════════════════════════════════════════════════════════════
+
+Generado automáticamente el 2025-10-21
+Fuente: https://github.com/oxbshw/ultimate-n8n-ai-workflows

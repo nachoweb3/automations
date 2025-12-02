@@ -1,0 +1,114 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║              🔄 GUÍA MAESTRA DE CONVERSIONES A GRATIS                        ║
+║              123 Workflows Convertibles                                  ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🎯 OBJETIVO
+═══════════════════════════════════════════════════════════════════════════════
+
+Convertir workflows que usan servicios de pago a alternativas 100% GRATUITAS.
+
+📊 RESUMEN DE CONVERSIONES
+═══════════════════════════════════════════════════════════════════════════════
+
+111 workflows:
+   ❌ OPENAI
+   ✅ Ollama (LLM local gratuito)
+   📝 Instala Ollama localmente (gratis) o usa Hugging Face API (plan gratuito)
+   🔗 https://ollama.ai
+
+  6 workflows:
+   ❌ TWILIO
+   ✅ Telegram Bot (gratis ilimitado)
+   📝 Telegram bots son 100% gratis y pueden enviar mensajes ilimitados
+   🔗 https://core.telegram.org/bots
+
+  4 workflows:
+   ❌ HUBSPOT
+   ✅ Airtable o NocoDB (open source)
+   📝 NocoDB es completamente gratis y open source
+   🔗 https://nocodb.com
+
+  3 workflows:
+   ❌ CHATGPT
+   ✅ Ollama con Llama2 o Mistral
+   📝 ollama pull llama2 → gratis y local
+   🔗 https://ollama.ai
+
+  2 workflows:
+   ❌ VONAGE
+   ✅ Telegram Bot
+   📝 Usa Telegram para notificaciones instantáneas (gratis)
+
+  1 workflows:
+   ❌ SALESFORCE
+   ✅ Airtable (plan gratuito) o Google Sheets
+   📝 Airtable tiene plan gratuito generoso, o usa Google Sheets como base de datos
+   🔗 https://airtable.com
+
+  1 workflows:
+   ❌ MAILGUN
+   ✅ Gmail SMTP
+   📝 Gmail SMTP gratis para volúmenes bajos
+
+  1 workflows:
+   ❌ ANTHROPIC
+   ✅ Ollama (LLM local gratuito)
+   📝 Instala Ollama localmente con modelos como llama2, mistral, etc.
+   🔗 https://ollama.ai
+
+  1 workflows:
+   ❌ ZENDESK
+   ✅ Sistema de tickets con Telegram o Discord
+   📝 Crea un bot de soporte en Telegram o Discord (gratis)
+
+💡 ALTERNATIVAS GRATUITAS POR CATEGORÍA
+═══════════════════════════════════════════════════════════════════════════════
+
+🤖 INTELIGENCIA ARTIFICIAL:
+   OpenAI/ChatGPT/Claude → Ollama (local, gratis)
+   • Instala: https://ollama.ai
+   • Modelos: llama2, mistral, codellama (todos gratis)
+   • Alternativa: Hugging Face (plan gratuito)
+
+📧 EMAIL MARKETING:
+   SendGrid/Mailgun → Gmail SMTP (500/día gratis)
+   Mailchimp → Brevo (300/día gratis)
+   • Gmail SMTP es gratis para volúmenes bajos
+   • Brevo: https://brevo.com (plan gratuito generoso)
+
+💾 CRM/BASES DE DATOS:
+   Salesforce/HubSpot → Airtable (plan gratuito)
+   • Airtable: https://airtable.com
+   • Alternativa: Google Sheets como base de datos
+   • Open source: NocoDB (https://nocodb.com)
+
+☁️  ALMACENAMIENTO:
+   AWS S3/Azure → Google Drive (15GB gratis)
+   • Google Drive API es gratis
+   • Alternativa: Almacenamiento local
+
+💬 MENSAJERÍA/SMS:
+   Twilio/Vonage → Telegram Bot (ilimitado gratis)
+   • Telegram bots: https://core.telegram.org/bots
+   • Alternativa: Discord webhooks
+
+📊 ANALYTICS:
+   Mixpanel/Amplitude → Google Analytics 4 (gratis)
+   • GA4 es completamente gratis
+   • Open source: Umami (https://umami.is)
+
+🛠️  CÓMO USAR ESTA GUÍA
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Explora las carpetas por categoría
+2. Cada workflow tiene un archivo CONVERSIÓN-A-GRATIS.txt
+3. Sigue las instrucciones paso a paso
+4. Instala las alternativas gratuitas
+5. Modifica el workflow en n8n
+6. ¡Disfruta sin costos!
+
+📁 Ubicación: C:\Users\Usuario\Desktop\automations\workflows-CONVERTIDOS-A-GRATIS
+📅 Generado: 2025-10-20

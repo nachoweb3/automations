@@ -1,0 +1,194 @@
+╔══════════════════════════════════════════════════════════════════╗
+║  Post RSS feed items from yesterday to Slack                     ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✅ WORKFLOW 100% GRATUITO
+
+📁 Archivo: 1176_Rssfeedread_Slack_Automation_Scheduled.json
+📂 Categoría: Desarrollo
+💰 Costo: GRATIS - Sin servicios de pago requeridos
+
+═════════════════════════════════════════════════════════════════
+ ¿POR QUÉ ES GRATIS?
+═════════════════════════════════════════════════════════════════
+
+Este workflow NO requiere:
+   ❌ APIs de pago (OpenAI, Anthropic, etc.)
+   ❌ Servicios premium (Salesforce, HubSpot, etc.)
+   ❌ Suscripciones mensuales
+   ❌ Límites restrictivos en planes gratuitos
+
+Usa únicamente:
+   ✅ function
+   ✅ if
+   ✅ schedule
+   ✅ cron
+   ✅ rss
+   ✅ json
+   ✅ datetime
+
+
+═════════════════════════════════════════════════════════════════
+ 💡 CASOS DE USO PRÁCTICOS
+═════════════════════════════════════════════════════════════════
+
+1. 💬 Bot de Notificaciones en Slack
+   ─────────────────────────────────────────────────────────────
+   Recibe alertas instantáneas en Slack cuando ocurren eventos
+
+   📝 EJEMPLO REAL:
+   "Cuando alguien compra en tu tienda, recibes mensaje en Slack con detalles"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Webhook/trigger detecta evento (compra, registro, etc)
+   2. Formatea mensaje con información relevante
+   3. Envía a tu canal/chat de Slack
+   4. Notificación instantánea en tu móvil
+
+2. 🤖 Comandos Interactivos en Slack
+   ─────────────────────────────────────────────────────────────
+   Controla tus sistemas con comandos desde Slack
+
+   📝 EJEMPLO REAL:
+   "Escribe /ventas en Slack y recibe reporte de ventas del día"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Usuario envía comando en Slack
+   2. Workflow detecta el comando
+   3. Ejecuta acción (consulta BD, genera reporte)
+   4. Responde con resultado en Slack
+
+3. 📊 Reportes Diarios en Slack
+   ─────────────────────────────────────────────────────────────
+   Recibe resúmenes automáticos cada día
+
+   📝 EJEMPLO REAL:
+   "Todos los días a las 8am recibes métricas del negocio en Slack"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Trigger programado (8am diario)
+   2. Consulta bases de datos/APIs
+   3. Genera resumen formateado
+   4. Envía a Slack
+
+4. ⏰ Tareas Recurrentes Automatizadas
+   ─────────────────────────────────────────────────────────────
+   Ejecuta tareas repetitivas sin intervención manual
+
+   📝 EJEMPLO REAL:
+   "Cada viernes genera reporte semanal y lo envía al equipo"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Trigger programado (viernes 5pm)
+   2. Recopila datos de la semana
+   3. Genera reporte formateado
+   4. Envía por email/Telegram al equipo
+
+5. 🧹 Limpieza Automática de Datos
+   ─────────────────────────────────────────────────────────────
+   Mantén tus sistemas limpios y organizados
+
+   📝 EJEMPLO REAL:
+   "Cada noche elimina registros temporales mayores a 30 días"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Trigger programado (2am diario)
+   2. Consulta registros antiguos
+   3. Filtra los que cumplen criterios
+   4. Elimina o archiva automáticamente
+
+6. 📰 Agregador de Noticias Personalizado
+   ─────────────────────────────────────────────────────────────
+   Recibe noticias relevantes de múltiples fuentes
+
+   📝 EJEMPLO REAL:
+   "Cada hora busca noticias sobre tu industria y las envía a Telegram"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Trigger cada hora
+   2. Lee feeds RSS de fuentes seleccionadas
+   3. Filtra por keywords relevantes
+   4. Envía resumen a Telegram/email
+
+7. ⚙️ ETL y Procesamiento de Datos
+   ─────────────────────────────────────────────────────────────
+   Extrae, transforma y carga datos entre sistemas
+
+   📝 EJEMPLO REAL:
+   "Convierte datos de ventas en formato compatible y los importa a analytics"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Extrae datos de sistema origen
+   2. Transforma formato (filtros, cálculos)
+   3. Valida y limpia datos
+   4. Carga en sistema destino
+
+8. 🔧 Lógica de Negocio Personalizada
+   ─────────────────────────────────────────────────────────────
+   Ejecuta cálculos y lógica compleja automáticamente
+
+   📝 EJEMPLO REAL:
+   "Calcula comisiones de vendedores basado en reglas complejas"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Recibe datos de ventas
+   2. Ejecuta código JavaScript personalizado
+   3. Aplica reglas de negocio
+   4. Guarda resultados en base de datos
+
+═════════════════════════════════════════════════════════════════
+ DESCRIPCIÓN
+═════════════════════════════════════════════════════════════════
+
+📊 Total de nodos: 6
+
+═════════════════════════════════════════════════════════════════
+ NODOS UTILIZADOS
+═════════════════════════════════════════════════════════════════
+
+▸ cron
+  └─ Every Morning
+▸ dateTime
+  └─ Get Yesterdays Date
+▸ function
+  └─ Build our message
+▸ if
+  └─ If it was published after yesterday
+▸ rssFeedRead
+  └─ Get the RSS Feed
+▸ slack
+  └─ Post to Slack
+
+═════════════════════════════════════════════════════════════════
+ CONFIGURACIÓN
+═════════════════════════════════════════════════════════════════
+
+📥 PASO 1: Importar
+   1. Abre n8n → http://localhost:5678
+   2. Menú (☰) → "Import from File"
+   3. Selecciona: 1176_Rssfeedread_Slack_Automation_Scheduled.json
+
+🔐 PASO 2: Credenciales (GRATIS)
+   1. Post to Slack
+      → Tipo: slack
+      → ✅ Usa cuentas/servicios gratuitos
+
+⚙️  PASO 3: Configurar parámetros
+   • Ajusta según tu caso de uso
+   • Todos los servicios son gratuitos
+
+▶️  PASO 4: Activar
+   • Guarda (Ctrl+S)
+   • Activa el workflow
+   • ¡Pruébalo!
+
+═════════════════════════════════════════════════════════════════
+
+💡 VENTAJAS DE WORKFLOWS GRATUITOS:
+   • Sin costos mensuales
+   • Sin límites estrictos de uso
+   • Fácil de escalar
+   • Ideal para aprender y experimentar
+
+📅 Organizado: 2025-10-20
+🔗 Fuente: https://github.com/oxbshw/ultimate-n8n-ai-workflows

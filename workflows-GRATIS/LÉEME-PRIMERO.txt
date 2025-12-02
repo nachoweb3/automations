@@ -1,0 +1,83 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║                  💚 WORKFLOWS N8N 100% GRATUITOS                             ║
+║                  163 Workflows Sin Costos                              ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✨ TODOS ESTOS WORKFLOWS SON COMPLETAMENTE GRATUITOS
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ No requieren APIs de pago (OpenAI, Anthropic, etc.)
+✅ No requieren suscripciones premium
+✅ Usan solo servicios gratuitos o de código abierto
+✅ Ideales para aprender, experimentar y producción
+
+📊 ESTADÍSTICAS
+═══════════════════════════════════════════════════════════════════════════════
+
+Total de workflows gratuitos: 163
+Workflows de pago excluidos: 137
+
+📁 CATEGORÍAS
+═══════════════════════════════════════════════════════════════════════════════
+
+ 38 workflows - Automatización-Básica
+ 15 workflows - Email-Gratis
+  2 workflows - Chat-Gratis
+  4 workflows - Bases-de-Datos-Gratis
+ 17 workflows - Desarrollo
+ 50 workflows - Webhooks-y-APIs
+  9 workflows - Google-Gratis
+  8 workflows - Utilidades
+ 20 workflows - Otros-Gratis
+
+🎯 SERVICIOS GRATUITOS DISPONIBLES
+═══════════════════════════════════════════════════════════════════════════════
+
+💬 Comunicación:
+   • Gmail (gratis)
+   • Telegram (gratis)
+   • Discord (gratis)
+   • Slack (plan gratuito)
+
+💾 Bases de Datos:
+   • PostgreSQL (open source)
+   • MySQL (open source)
+   • MongoDB (community)
+   • SQLite (gratis)
+
+🌐 Google (Gratis):
+   • Google Sheets
+   • Google Drive
+   • Google Calendar
+
+🔧 Utilidades:
+   • Webhooks
+   • HTTP requests
+   • Código JavaScript/Python
+   • Procesamiento de datos
+
+🚫 SERVICIOS DE PAGO EXCLUIDOS
+═══════════════════════════════════════════════════════════════════════════════
+
+Estos workflows NO están incluidos porque requieren pago:
+   ❌ OpenAI, ChatGPT, Claude (APIs de IA de pago)
+   ❌ Salesforce, HubSpot (CRM premium)
+   ❌ Stripe, PayPal (procesamiento de pagos)
+   ❌ AWS, Azure, GCP (cloud de pago)
+   ❌ SendGrid, Mailchimp (email marketing de pago)
+
+💡 Nota: Los workflows excluidos están en otra carpeta si los necesitas
+
+🎓 CÓMO USAR
+═══════════════════════════════════════════════════════════════════════════════
+
+1. Navega por las carpetas de categorías
+2. Cada workflow tiene su README.txt con instrucciones
+3. Importa el archivo .json en n8n
+4. Configura (todo gratis)
+5. ¡Disfruta sin costos!
+
+📍 Ubicación: C:\Users\Usuario\Desktop\automations\workflows-GRATIS
+📅 Generado: 2025-10-20

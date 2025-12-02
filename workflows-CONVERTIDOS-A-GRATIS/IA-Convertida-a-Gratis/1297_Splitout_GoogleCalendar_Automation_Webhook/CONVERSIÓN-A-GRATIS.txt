@@ -1,0 +1,206 @@
+╔══════════════════════════════════════════════════════════════════╗
+║  1297_Splitout_GoogleCalendar_Automation_Webhook                 ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+═════════════════════════════════════════════════════════════════
+ 💡 CASOS DE USO PRÁCTICOS
+═════════════════════════════════════════════════════════════════
+
+1. 🤖 Generación de Contenido Automático
+   ─────────────────────────────────────────────────────────────
+   Genera artículos, posts, descripciones de productos automáticamente
+
+   📝 EJEMPLO REAL:
+   "Cada lunes a las 9am, genera un artículo de blog sobre tendencias tech usando IA local (Ollama)"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Configura trigger programado (lunes 9am)
+   2. Define el tema o keywords
+   3. Ollama genera contenido (gratis, sin límites)
+   4. Revisa y publica en tu blog/CMS
+
+2. 💬 Chatbot de Soporte Inteligente
+   ─────────────────────────────────────────────────────────────
+   Responde automáticamente preguntas de clientes usando IA
+
+   📝 EJEMPLO REAL:
+   "Cuando llega un email de soporte, la IA analiza la pregunta y genera una respuesta personalizada"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Email nuevo activa el workflow
+   2. IA (Ollama) analiza la consulta
+   3. Genera respuesta contextual
+   4. Envía email automático al cliente
+
+3. 📊 Análisis de Sentimiento
+   ─────────────────────────────────────────────────────────────
+   Analiza opiniones de clientes, reviews, feedback automáticamente
+
+   📝 EJEMPLO REAL:
+   "Procesa reviews de productos y clasifica como positivo/negativo/neutral"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Recibe review (webhook/email/form)
+   2. IA analiza sentimiento
+   3. Clasifica y guarda en Google Sheets
+   4. Alerta si hay reviews negativos
+
+4. 🌐 Integración entre Servicios Web
+   ─────────────────────────────────────────────────────────────
+   Conecta aplicaciones que no se integran nativamente
+
+   📝 EJEMPLO REAL:
+   "Cuando hay una venta en Shopify, crea tarea en tu sistema de gestión"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Webhook recibe datos de Shopify
+   2. Transforma formato de datos
+   3. Envía a tu sistema vía API
+   4. Registra transacción
+
+5. 📡 Monitoreo de APIs
+   ─────────────────────────────────────────────────────────────
+   Verifica disponibilidad y rendimiento de servicios
+
+   📝 EJEMPLO REAL:
+   "Cada 5 minutos verifica que tu API esté funcionando, alerta si hay problemas"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Trigger cada 5 minutos
+   2. Hace request a tu API
+   3. Verifica status y tiempo de respuesta
+   4. Alerta si detecta problema
+
+6. ⚙️ ETL y Procesamiento de Datos
+   ─────────────────────────────────────────────────────────────
+   Extrae, transforma y carga datos entre sistemas
+
+   📝 EJEMPLO REAL:
+   "Convierte datos de ventas en formato compatible y los importa a analytics"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Extrae datos de sistema origen
+   2. Transforma formato (filtros, cálculos)
+   3. Valida y limpia datos
+   4. Carga en sistema destino
+
+🔄 WORKFLOW CONVERTIDO A GRATIS
+
+📁 Archivo original: 1297_Splitout_GoogleCalendar_Automation_Webhook.json
+📂 Categoría: IA-Convertida-a-Gratis
+💰 Estado: Convertible a 100% GRATIS
+
+═════════════════════════════════════════════════════════════════
+ CONVERSIONES NECESARIAS
+═════════════════════════════════════════════════════════════════
+
+1. REEMPLAZAR: OPENAI
+   ❌ Servicio de pago: openai
+   ✅ Alternativa GRATIS: Ollama (LLM local gratuito)
+
+   📖 INSTRUCCIONES:
+   Instala Ollama localmente (gratis) o usa Hugging Face API (plan gratuito)
+
+   🔗 Más info: https://ollama.ai
+
+   🔧 CAMBIO EN N8N:
+   • Nodo original: n8n-nodes-base.openai
+   • Nuevo nodo: n8n-nodes-base.httpRequest
+   • Nueva configuración:
+     - url: http://localhost:11434/api/generate
+     - method: POST
+
+   ─────────────────────────────────────────────────────────────
+
+═════════════════════════════════════════════════════════════════
+ PASOS PARA CONVERTIR A GRATIS
+═════════════════════════════════════════════════════════════════
+
+📥 PASO 1: Importar el workflow original
+   1. Abre n8n → http://localhost:5678
+   2. Importa: 1297_Splitout_GoogleCalendar_Automation_Webhook.json
+
+🔧 PASO 2: Realizar conversiones
+   1. openai → Ollama (LLM local gratuito)
+
+⚙️  PASO 3: Configurar servicios gratuitos
+   • Instala/configura las alternativas gratuitas
+   • Actualiza credenciales en n8n
+   • Ajusta endpoints y configuraciones
+
+✅ PASO 4: Probar y activar
+   • Ejecuta el workflow manualmente
+   • Verifica que funciona correctamente
+   • Activa el workflow
+
+═════════════════════════════════════════════════════════════════
+ NODOS DEL WORKFLOW ORIGINAL
+═════════════════════════════════════════════════════════════════
+
+▸ @n8n/n8n-nodes-langchain.agent
+  └─ AI Agent
+▸ @n8n/n8n-nodes-langchain.lmChatOpenAi
+  └─ OpenAI Chat Model1
+▸ @n8n/n8n-nodes-langchain.outputParserStructured
+  └─ Structured Output Parser
+▸ @n8n/n8n-nodes-langchain.toolWorkflow
+  └─ Schedule Meeting
+▸ executeWorkflowTrigger
+  └─ Execute Workflow Trigger
+▸ extractFromFile
+  └─ PDF Loader
+▸ googleCalendar
+  └─ Get Calendar Event
+  └─ Add Attendee to Invite
+  └─ Create Calendar Event1
+▸ googleDrive
+  └─ Get Transcript File
+▸ httpRequest
+  └─ Get Meeting ConferenceRecords
+  └─ Get Meeting Transcript Location
+▸ manualTrigger
+  └─ When clicking "Test workflow"
+▸ set
+  └─ Response
+  └─ Edit Fields
+  └─ Fallback Response
+  └─ Get Attendees
+▸ splitOut
+  └─ Attendees List
+▸ stickyNote
+  └─ Sticky Note
+  └─ Sticky Note2
+  └─ Sticky Note3
+  └─ Sticky Note4
+  └─ Sticky Note6
+  └─ Sticky Note5
+  └─ Sticky Note1
+  └─ Sticky Note7
+  └─ Sticky Note8
+▸ switch
+  └─ Actions Router
+
+═════════════════════════════════════════════════════════════════
+ BENEFICIOS DE LA CONVERSIÓN
+═════════════════════════════════════════════════════════════════
+
+💰 AHORRO DE DINERO:
+   • openai: Ahorras $$$/mes
+
+🔓 VENTAJAS ADICIONALES:
+   ✓ Sin límites restrictivos
+   ✓ Mayor control de datos
+   ✓ Sin dependencia de servicios externos
+   ✓ Solución sostenible a largo plazo
+
+═════════════════════════════════════════════════════════════════
+ RECURSOS ÚTILES
+═════════════════════════════════════════════════════════════════
+
+• Ollama (LLM local gratuito): https://ollama.ai
+
+═════════════════════════════════════════════════════════════════
+
+📅 Convertido: 2025-10-20
+🔗 Fuente: https://github.com/oxbshw/ultimate-n8n-ai-workflows

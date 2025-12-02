@@ -1,0 +1,418 @@
+WORKFLOWS QUE REQUIEREN SERVICIOS DE PAGO
+═══════════════════════════════════════════════════════════════════════════════
+
+Total: 137 workflows
+
+Estos workflows NO están en la carpeta GRATIS porque usan servicios de pago:
+
+  1. 1071_Googlecalendartool_Stickynote_Create_Triggered.json
+     Servicios de pago: openai
+
+  2. 1081_HubSpot_Automate_Triggered.json
+     Servicios de pago: hubspot
+
+  3. 1094_Manual_Salesforce_Automate_Triggered.json
+     Servicios de pago: salesforce
+
+  4. 1101_Openweathermap_Twilio_Automate_Scheduled.json
+     Servicios de pago: twilio
+
+  5. 1102_Manual_Openai_Automation_Triggered.json
+     Servicios de pago: openai
+
+  6. 1103_Googletaskstool_Telegram_Automation_Webhook.json
+     Servicios de pago: openai
+
+  7. 1104_Stickynote_Create_Triggered.json
+     Servicios de pago: openai
+
+  8. 1105_Manual_Stickynote_Automation_Webhook.json
+     Servicios de pago: openai
+
+  9. 1108_Postgres_Googlecloudnaturallanguage_Automation_Scheduled.json
+     Servicios de pago: googlecloud
+
+ 10. 1112_HTTP_Stickynote_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 11. 1113_Telegram_Splitout_Automation_Scheduled.json
+     Servicios de pago: openai
+
+ 12. 1119_Openweathermap_Twilio_Automate_Webhook.json
+     Servicios de pago: twilio
+
+ 13. 1121_Linkedin_Wait_Create_Webhook.json
+     Servicios de pago: openai
+
+ 14. 1130_Noop_Twilio_Send_Scheduled.json
+     Servicios de pago: twilio
+
+ 15. 1133_Googlesheetstool_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 16. 1134_Googledocs_Code_Create_Webhook.json
+     Servicios de pago: openai
+
+ 17. 1136_Manual_HubSpot_Automation_Triggered.json
+     Servicios de pago: hubspot
+
+ 18. 1138_Airtable_Vonage_Automation_Scheduled.json
+     Servicios de pago: vonage
+
+ 19. 1146_Splitout_Code_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 20. 1148_Woocommerce_Slack_Create_Triggered.json
+     Servicios de pago: woocommerce
+
+ 21. 1150_Noop_Executecommand_Automation_Scheduled.json
+     Servicios de pago: twilio
+
+ 22. 1151_Woocommerce_Slack_Create_Triggered.json
+     Servicios de pago: woocommerce
+
+ 23. 1155_Woocommerce_Slack_Create_Triggered.json
+     Servicios de pago: woocommerce
+
+ 24. 1160_Mautic_Woocommerce_Create_Triggered.json
+     Servicios de pago: woocommerce
+
+ 25. 1163_Openweathermap_Cron_Update_Scheduled.json
+     Servicios de pago: vonage
+
+ 26. 1165_Twitter_Telegram_Create_Triggered.json
+     Servicios de pago: woocommerce
+
+ 27. 1170_Manual_Jira_Create_Triggered.json
+     Servicios de pago: jira
+
+ 28. 1172_Slack_HubSpot_Send_Triggered.json
+     Servicios de pago: hubspot
+
+ 29. 1177_Openai_GoogleSheets_Create_Triggered.json
+     Servicios de pago: openai
+
+ 30. 1178_Code_HTTP_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 31. 1179_Error_Mailgun_Automate_Triggered.json
+     Servicios de pago: mailgun
+
+ 32. 1182_Telegram_Webhook_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 33. 1184_Debughelper_HTTP_Create_Webhook.json
+     Servicios de pago: openai
+
+ 34. 1185_Telegram_Wait_Automate_Webhook.json
+     Servicios de pago: openai
+
+ 35. 1186_Rssfeedread_Telegram_Create_Triggered.json
+     Servicios de pago: openai
+
+ 36. 1193_Manual_Intercom_Create_Triggered.json
+     Servicios de pago: intercom
+
+ 37. 1198_Twilio_Pushcut_Send_Triggered.json
+     Servicios de pago: twilio
+
+ 38. 1215_Mattermost_Typeform_Automate_Triggered.json
+     Servicios de pago: aws
+
+ 39. 1237_Error_Telegram_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 40. 1240_Markdown_Stickynote_Send.json
+     Servicios de pago: openai
+
+ 41. 1241_Manual_HTTP_Process_Webhook.json
+     Servicios de pago: openai
+
+ 42. 1242_Discordtool_Stickynote_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 43. 1243_Splitout_Limit_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 44. 1244_Telegram_GoogleSheets_Automate_Triggered.json
+     Servicios de pago: openai
+
+ 45. 1246_Extractfromfile_HTTP_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 46. 1247_Googlecalendartool_Stickynote_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 47. 1248_Gmailtool_Splitout_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 48. 1249_Postgres_Webhook_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 49. 1251_Postgrestool_Stickynote_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 50. 1252_Webhook_Respondtowebhook_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 51. 1254_Extractfromfile_Form_Automate_Triggered.json
+     Servicios de pago: openai
+
+ 52. 1255_Webhook_Respondtowebhook_Automate_Webhook.json
+     Servicios de pago: openai
+
+ 53. 1256_Openai_Form_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 54. 1257_Code_Webhook_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 55. 1258_Splitout_Code_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 56. 1260_Splitout_Manual_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 57. 1261_Airtabletool_Stickynote_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 58. 1262_Limit_Webhook_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 59. 1263_Webhook_Respondtowebhook_Automate_Webhook.json
+     Servicios de pago: openai
+
+ 60. 1264_Code_HTTP_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 61. 1265_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 62. 1266_Respondtowebhook_Stickynote_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 63. 1267_HTTP_Markdown_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 64. 1268_Stickynote_Hackernews_Automate_Triggered.json
+     Servicios de pago: openai
+
+ 65. 1269_Stickynote_Automate_Triggered.json
+     Servicios de pago: openai
+
+ 66. 1270_Schedule_Manual_Automation_Scheduled.json
+     Servicios de pago: openai
+
+ 67. 1272_Datetime_Webhook_Create_Webhook.json
+     Servicios de pago: openai
+
+ 68. 1273_Datetime_Webhook_Create_Webhook.json
+     Servicios de pago: openai
+
+ 69. 1275_Schedule_Telegram_Automation_Scheduled.json
+     Servicios de pago: openai
+
+ 70. 1276_Schedule_Telegram_Automation_Scheduled.json
+     Servicios de pago: openai
+
+ 71. 1277_Emailreadimap_Manual_Send_Webhook.json
+     Servicios de pago: openai
+
+ 72. 1278_Code_Schedule_Monitor_Webhook.json
+     Servicios de pago: openai
+
+ 73. 1279_Googledocs_Manual_Automate_Triggered.json
+     Servicios de pago: openai
+
+ 74. 1280_Linkedin_Telegram_Automation_Scheduled.json
+     Servicios de pago: openai
+
+ 75. 1281_Code_Schedule_Monitor_Webhook.json
+     Servicios de pago: openai
+
+ 76. 1282_Wait_Code_Import_Webhook.json
+     Servicios de pago: openai
+
+ 77. 1283_Splitout_Webhook_Automation_Webhook.json
+     Servicios de pago: openai, woocommerce
+
+ 78. 1284_Emailreadimap_Markdown_Send.json
+     Servicios de pago: openai
+
+ 79. 1285_Manual_Stickynote_Import_Triggered.json
+     Servicios de pago: openai
+
+ 80. 1286_Code_Manual_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 81. 1288_Telegram_Wait_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 82. 1289_Limit_Webhook_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 83. 1291_Telegram_Code_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 84. 1292_Code_GitHub_Automate_Webhook.json
+     Servicios de pago: openai
+
+ 85. 1294_Compression_Manual_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 86. 1297_Splitout_GoogleCalendar_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 87. 1298_Trello_Googlecloudnaturallanguage_Create_Triggered.json
+     Servicios de pago: googlecloud
+
+ 88. 1299_Code_Webhook_Automation_Webhook.json
+     Servicios de pago: openai, anthropic
+
+ 89. 1300_Telegram_Stickynote_Create_Webhook.json
+     Servicios de pago: openai
+
+ 90. 1301_Code_Extractfromfile_Automation_Triggered.json
+     Servicios de pago: openai
+
+ 91. 1303_Manual_Stickynote_Create_Triggered.json
+     Servicios de pago: openai
+
+ 92. 1305_Telegram_Splitout_Export_Webhook.json
+     Servicios de pago: openai
+
+ 93. 1306_Splitout_Schedule_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 94. 1307_Code_Converttofile_Send_Webhook.json
+     Servicios de pago: openai, jira
+
+ 95. 1308_Code_Microsoftoutlook_Send_Webhook.json
+     Servicios de pago: openai, jira
+
+ 96. 1309_Mattermost_Googlecloudnaturallanguage_Send_Triggered.json
+     Servicios de pago: googlecloud
+
+ 97. 1310_Mattermost_Typeform_Send_Triggered.json
+     Servicios de pago: aws
+
+ 98. 1311_Respondtowebhook_Stickynote_Automation_Webhook.json
+     Servicios de pago: openai
+
+ 99. 1312_Wait_Schedule_Create_Webhook.json
+     Servicios de pago: jira
+
+100. 1315_Telegram_Gmailtool_Automation_Triggered.json
+     Servicios de pago: openai
+
+101. 1316_Form_Stickynote_Automation_Webhook.json
+     Servicios de pago: openai
+
+102. 1318_Slack_Stickynote_Automation_Triggered.json
+     Servicios de pago: openai
+
+103. 1319_Manual_Stickynote_Automation_Triggered.json
+     Servicios de pago: openai
+
+104. 1320_Code_Schedule_Automate_Webhook.json
+     Servicios de pago: openai
+
+105. 1322_Manual_Wordpress_Automation_Triggered.json
+     Servicios de pago: openai
+
+106. 1323_Splitout_Code_Automation_Webhook.json
+     Servicios de pago: openai
+
+107. 1324_Aggregate_Gmail_Send_Triggered.json
+     Servicios de pago: openai
+
+108. 1325_Splitout_Limit_Automate_Webhook.json
+     Servicios de pago: openai
+
+109. 1327_Wordpress_Manual_Automate_Webhook.json
+     Servicios de pago: openai, woocommerce
+
+110. 1328_Jiratool_Schedule_Automate_Scheduled.json
+     Servicios de pago: openai, jira
+
+111. 1330_Linkedin_Schedule_Automate_Webhook.json
+     Servicios de pago: openai
+
+112. 1331_Code_Schedule_Automate_Webhook.json
+     Servicios de pago: openai
+
+113. 1332_Splitout_Zendesk_Send_Triggered.json
+     Servicios de pago: openai, zendesk
+
+114. 1333_Splitout_GoogleCalendar_Automate_Webhook.json
+     Servicios de pago: openai
+
+115. 1334_HTTP_Manual_Automation_Webhook.json
+     Servicios de pago: openai
+
+116. 1335_Googledocs_Webhook_Process_Webhook.json
+     Servicios de pago: openai
+
+117. 1336_Strapi_Webhook_Automate_Webhook.json
+     Servicios de pago: googlecloud
+
+118. 1337_Code_Schedule_Automate_Webhook.json
+     Servicios de pago: openai
+
+119. 1338_Telegram_Stickynote_Automate_Triggered.json
+     Servicios de pago: openai
+
+120. 1339_Manual_HTTP_Automation_Webhook.json
+     Servicios de pago: openai
+
+121. 1341_Telegram_Splitout_Automate_Webhook.json
+     Servicios de pago: openai
+
+122. 1342_Linkedin_Telegram_Automate_Webhook.json
+     Servicios de pago: openai
+
+123. 1344_Splitout_Filter_Automation_Webhook.json
+     Servicios de pago: openai
+
+124. 1345_Schedule_Discord_Automation_Scheduled.json
+     Servicios de pago: openai
+
+125. 1350_Mysqltool_Stickynote_Automate_Webhook.json
+     Servicios de pago: openai
+
+126. 1352_Splitout_Filter_Automate_Triggered.json
+     Servicios de pago: openai
+
+127. 1353_Stickynote_Gmail_Send_Triggered.json
+     Servicios de pago: openai
+
+128. 1359_Wait_Splitout_Create_Webhook.json
+     Servicios de pago: openai
+
+129. 1360_Manual_Stickynote_Create_Triggered.json
+     Servicios de pago: openai
+
+130. 1361_GoogleCalendar_Webhook_Create_Webhook.json
+     Servicios de pago: openai
+
+131. 1362_Wait_Webhook_Create_Webhook.json
+     Servicios de pago: openai, twilio
+
+132. 1363_Splitout_GitHub_Create_Webhook.json
+     Servicios de pago: openai
+
+133. 1364_Extractfromfile_Manual_Create_Webhook.json
+     Servicios de pago: openai
+
+134. 1365_Extractfromfile_Manual_Create_Webhook.json
+     Servicios de pago: openai
+
+135. 1366_Wait_Code_Automation_Webhook.json
+     Servicios de pago: openai, hubspot
+
+136. 1368_Telegram_Limit_Export_Triggered.json
+     Servicios de pago: openai
+
+137. 1370_HTTP_Extractfromfile_Automation_Webhook.json
+     Servicios de pago: openai
+

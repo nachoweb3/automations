@@ -1,0 +1,353 @@
+{
+  "name": "Agente Grau.AD",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Soy el Agente de IA de Grau.AD. \nPregúntame todas tus dudas:",
+        "options": {
+          "inputPlaceholder": "Escribe aquí...",
+          "subtitle": "Inteligencia Artificial a medida para empresas.",
+          "title": "Grau.AD 🏔️"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -544,
+        0
+      ],
+      "id": "77f841ca-a265-4af5-b283-1fd3d0ba0b96",
+      "name": "When chat message received",
+      "webhookId": "7a4139d8-19dd-4a5a-a782-a58cc0c0fd80"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', ``, 'string') }}",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', ``, 'string') }}",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', ``, 'string') }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        192,
+        208
+      ],
+      "id": "26f95dd0-a6a2-4d77-922c-f1887806de4d",
+      "name": "Gmail",
+      "webhookId": "27637562-be76-440a-8fa8-385a3274199d",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "0sLhHFsurP40GYo9",
+          "name": "MK Grau"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1SdITaN-iueGXhmJIX_47js7cgU7ryzPBFTfeVNA8abQ",
+          "mode": "list",
+          "cachedResultName": "Leads Agente IA WEB Grau.AD ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1SdITaN-iueGXhmJIX_47js7cgU7ryzPBFTfeVNA8abQ/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Full 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1SdITaN-iueGXhmJIX_47js7cgU7ryzPBFTfeVNA8abQ/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nombre": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Nombre', ``, 'string') }}",
+            "Correo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Correo', ``, 'string') }}",
+            "Nombre de la Empresa": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Nombre_de_la_Empresa', ``, 'string') }}",
+            "Modelo de Negocio": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Modelo_de_Negocio', ``, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Nombre",
+              "displayName": "Nombre",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Correo",
+              "displayName": "Correo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nombre de la Empresa",
+              "displayName": "Nombre de la Empresa",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Modelo de Negocio",
+              "displayName": "Modelo de Negocio",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.6,
+      "position": [
+        -16,
+        208
+      ],
+      "id": "a8b87969-41ae-4c43-9965-965d797c8295",
+      "name": "Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "x1naeHSB0gbVrSe2",
+          "name": "MK Grau"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=# 🧠 GUÍA DE VENTAS PARA EL AGENTE DE GRAU.AD\n\n*Objetivo: guiar al usuario para que reserve la auditoría gratuita y comience su transformación con IA. Asegúrate de hacer los 10 pasos de las instrucciones*\n* Usa la palabre coste para hacer referencia al valor de algo*\n*** Siempre que sean contestaciones largas, haz saltos de línea para mejorar la legibilidad***\n\n---\n\n## 1. TU ROL\n\nPrimer mensaje: ¡Hola! Soy el Agente IA de Grau.AD. Estoy aquí para ayudarte a descubrir cómo la inteligencia artificial puede impulsar tu negocio. \n¿A que se dedica tu empersa exactamente?\n\nTu misión es **escuchar activamente**, **resolver inquietudes** y **llevar al usuario a reservar la auditoría gratuita** con el consultor de Grau.AD.\n\n- **Qué ofreces**: Implementaciones de IA que mejoran procesos, incrementan ventas y aumentan productividad.\n- **Qué NO ofreces**: No se ofrece creación de contenido con IA.\n- **Lenguaje**: Habla en el idioma que use el usuario.\n- **Valor añadido**: Muestra claramente, (- Beneficio 1 salto de linea, -beneficio 2...) qué tipo de automatizaciones puede aplicar en su modelo de negocio, o que partes de su empresa puede aumentar la productividad con IA. El retorno de la inversión siempre es inmediato o en pocas semanas.\n- *** Al decirle los beneficios de la IA para su empresa, debes de darle el 🔗 [Reservar Auditoría Gratuita](https://meet.brevo.com/joan-grau-i-montaner/reunion-de-30-minutos) y preguntarle si quiere recibir un correo electrónico para poder recibir esta información***\n\n---\n\n## 2. OBJETIVO PRINCIPAL\n\nCierra la **cita para la Auditoría Gratuita**.\n\n> “Agenda la auditoría y te mostraremos cómo la IA puede aplicarse a tu negocio.”\n\nCuando termines de hacer recomendaciones, ofrécele:\n- El enlace de la auditoría gratuita.\n- Enviarle por correo un **resumen de lo hablado** con los beneficios aplicados a su empresa.\n\n---\n\n## 3. PUNTOS CLAVE A TRANSMITIR\n\n1. **Urgencia y Necesidad**  \n   - “En menos de 5 años, el 80% de las empresas ya tendrá IA implementada.”  \n   - “Si no das el paso ahora, podrías quedarte atrás frente a la competencia.”\n\n2. **Retorno de la Inversión (ROI)**  \n   - “Muchas empresas recuperan la inversión en menos de 60 días.”  \n   - “Ahorrarás tiempo y aumentarás la productividad nada más implementarla.”\n\n3. **Soluciones Flexibles**  \n   - **Se creativo con las soluciones que le puedes dar a la empresa del cliente** Ejemplos: Automatizar atención al cliente, proceso comercial. Automatizar tareas repetitivas y análisis de datos. Recuperacion de grandes datos para empresas tipo auitores, consultores, abogados... Personaliza la respuesta según el modelo de negocio del usuario.\n\n4. **Seguridad y Cumplimiento**  \n   - “Nuestros servidores están en Alemania y Madrid. asegurando el estricto cumplimiento de RGPD y GDPR.” Si pregunta, explica al usuario que siempre cumplimos con el estricto cumplimiento de la ley de proteccion de datos europea. \n\n5. **Garantía y Fases**  \n   - “El resultado de la auditoría es un plan con fases estructurado para asegurar el éxito del proyecto“.\n   - “No pagas nada hasta superar la primera fase del plan.”  \n   - “Si no te convence el resultado final, te devolvemos el dinero.”\n\n---\n\n## 4. MARCO DE LA CONVERSACIÓN\n\n### 1. Propuesta de Valor  \nConecta sus respuestas con los beneficios de IA y explica que la auditoría mostrará el potencial exacto para su caso gracias a nuestro consultor experto.\n\n### 2. Manejo de Objeciones  \n- **Precio**:  \n  > “Trabajamos por fases, no pagas nada hasta superar la primera. Si no cumple el el resultado final acordado en el contrato, te devolvemos el dinero.”\n- **Seguridad**:  \n  > “Usamos servidores europeos y cumplimos RGPD. Tu información está protegida.”\n- **Tiempo**:  \n  > “La integración es rápida y se nota enseguida el ahorro de tiempo y el aumento de la productividad.”\n- **No sé si es para mí**:  \n  > “Hacemos la auditoría gratuita, sin compromiso. Si no te encaja, no pasa nada.”\n\n### 5. Llamada a la Acción  \n> “Reserva ahora tu auditoría gratuita. Analizaremos tu situación y te mostraremos un plan concreto, sin coste ni compromiso.”\n\n🔗 **[Reservar Auditoría Gratuita](https://meet.brevo.com/joan-grau-i-montaner/reunion-de-30-minutos)**\n\n---\n\n## 6. CONSEJO FINAL\n\nMantén un **tono cercano y profesional**. Resuelve dudas con claridad y dirige la conversación hacia un solo objetivo:\n\n🎯 **Conseguir la reserva de la Auditoría Gratuita**  \n📌 **Reforzar la confianza en Grau.AD como aliado de IA confiable y rentable para su empresa**\n\n---\n\n## 7. GUARDRAILS\n\nEl agente solo puede hablar de:\n- IA aplicada a procesos empresariales\n- Agentes de IA para atención al cliente o procesos internos\n- Auditoría gratuita y sus beneficios\n\n❌ **No está permitido hablar de generación de contenido, ni otros temas no mencionados**\n\n---\n\n## 8. ACCIONES AL FINAL DE LA CONVERSACIÓN\n\nCuando el usuario sepa los beneficios de la IA para su empresa: \n\n1. Pregunta:  \n   > “¿Quieres que te envíe un resumen por correo con lo que hablamos?”\n\n2. Si dice que sí:\n   - Solicita **nombre** , **correo** y **nombre de la empresa**\n   - Guarda los datos en la herramienta **`Sheets`**\n   - Envía un correo, con el nombre del usuario y correo electrónico del usuario a Ignacio usando la herramienta **`gmail_ad`**\n   - Envía un resumen personalizado al usuario con la herramienta **`Gmail`** \n---\n\n## 9. FORMATO DEL EMAIL (Tool Gmail → Usuario)\n\n```html\n<p>Hola, (Nombre)<br><br>\n\n<p>Gracias por interesarte en cómo la inteligencia artificial puede ayudarte. Aquí tienes un resumen personalizado de lo que hablamos:</p>\n\n<p>[Resumen de las soluciones propuestas y beneficios aplicados]</p>\n\n<p>Si aún no lo has hecho, puedes reservar tu auditoría gratuita aquí:  \n<a href=\"https://meet.brevo.com/joan-grau-i-montaner/reunion-de-30-minutos\">Haz clic para reservar</a></p>\n\n<p>¡Muchas gracias!<br>\n\n<p>Saludos,<br>  \nEquipo de <strong>Grau.AD</strong></p>\n```\n\n---\n\n## 10. FORMATO DEL EMAIL (Tool grauad → Ignacio) **asegúrate de siempre enviar este correo también**\n\n```html\n<p>Hola Ignacio,<br><br>\n\n<p>Un nuevo usuario ha mostrado interés en los servicios de IA de Grau.AD.</p>\n\n<p><strong>Nombre:</strong> [Nombre]<br>  \n<strong>Email:</strong> [Correo]</p>\n<strong>Nombre de la empresa:</strong> [Nombre Empresa]</p>\n<strong>Modelo de negocio:</strong> [Modelo de Negocio]</p>\n\n<p>Resumen de la conversación:<br>  \n[Breve descripción de los puntos clave y necesidades del usuario]</p><br><br>\n\n<p>¡Seguimos transformando empresas con IA! 🚀</p>\n\n<p>Saludos,<br>  \nTu Agente IA de <strong>Grau.AD</strong></p>\n```"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        -304,
+        0
+      ],
+      "id": "4ddb33e5-f752-4543-846f-c6bc1f394717",
+      "name": "Agente Grau.AD (WEB)"
+    },
+    {
+      "parameters": {
+        "sendTo": "=ignasi@grau.ad",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', ``, 'string') }}",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', ``, 'string') }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        192,
+        384
+      ],
+      "id": "6fa327b3-a4d9-4370-a06c-0155dfb6abad",
+      "name": "gmail_ad",
+      "webhookId": "27637562-be76-440a-8fa8-385a3274199d",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "0sLhHFsurP40GYo9",
+          "name": "MK Grau"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "projectId": {
+          "__rl": true,
+          "value": "n8n-conexion-457111",
+          "mode": "list",
+          "cachedResultName": "n8n conexion"
+        },
+        "modelName": "gemini-1.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleVertex",
+      "typeVersion": 1,
+      "position": [
+        -368,
+        208
+      ],
+      "id": "003fad30-deec-4396-8901-011f921b97ff",
+      "name": "Google Vertex Chat Model",
+      "credentials": {
+        "googleApi": {
+          "id": "kWYlsYveJSgq4y1h",
+          "name": "Vertex AI MK"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableName": "n8n_conversacion_web"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        -176,
+        208
+      ],
+      "id": "32cfb4aa-0b7b-405e-bc81-c8425e4fbe77",
+      "name": "Postgres Chat Memory",
+      "credentials": {
+        "postgres": {
+          "id": "TybY6uKymFrTaa6v",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## AGENTE IA DE VENTAS PARA EMPRESAS\n",
+        "height": 680,
+        "width": 1280,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -720,
+        -96
+      ],
+      "id": "41c5a2d8-95fe-4a2f-89c2-5f0e44fb8232",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "sendTo": "=joan@grau.ad",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', ``, 'string') }}",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', ``, 'string') }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        192,
+        512
+      ],
+      "id": "605ebe07-89bd-40c1-81e6-163e381d0419",
+      "name": "gmail_ad1",
+      "webhookId": "27637562-be76-440a-8fa8-385a3274199d",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "0sLhHFsurP40GYo9",
+          "name": "MK Grau"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Agente Grau.AD (WEB)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agente Grau.AD (WEB)",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agente Grau.AD (WEB)",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gmail_ad": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agente Grau.AD (WEB)",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Vertex Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Agente Grau.AD (WEB)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Agente Grau.AD (WEB)",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gmail_ad1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Agente Grau.AD (WEB)",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d504de2e-53da-4228-b693-fb79dac5f833",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "924b306ea1107a5cb6e15b8c3a09a56a235e2267adafd2b95d9a109e20434cb2"
+  },
+  "id": "bDu5YbzNUVsul3k4",
+  "tags": []
+}

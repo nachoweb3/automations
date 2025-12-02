@@ -1,0 +1,30 @@
+# 1232_Manual_Splitinbatches_Automate_Triggered
+
+## Archivo
+1232_Manual_Splitinbatches_Automate_Triggered.json
+
+## Descripción
+
+## Nodos utilizados (5 total)
+
+### n8n-nodes-base.function
+- Function
+
+### n8n-nodes-base.if
+- IF
+
+### n8n-nodes-base.manualTrigger
+- On clicking 'execute'
+
+### n8n-nodes-base.set
+- Set
+
+### n8n-nodes-base.splitInBatches
+- SplitInBatches
+
+## Configuración
+
+1. Importa el archivo `1232_Manual_Splitinbatches_Automate_Triggered.json` en n8n
+2. Revisa las credenciales necesarias:
+   - No se detectaron credenciales específicas (revisa manualmente)
+3. Activa el workflow desde la interfaz de n8n

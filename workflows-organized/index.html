@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N8N Workflows - Índice Interactivo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .search-bar {
+            padding: 30px;
+            background: #f7fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        input[type="search"] {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            border: 2px solid #cbd5e0;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        input[type="search"]:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .filters {
+            padding: 20px 30px;
+            background: #edf2f7;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-tag {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #cbd5e0;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .filter-tag:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .filter-tag.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-bottom: 15px;
+        }
+
+        .category-header:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .category-icon {
+            font-size: 2em;
+        }
+
+        .category-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            flex: 1;
+        }
+
+        .category-count {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .workflows-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            padding: 0 20px 20px 20px;
+        }
+
+        .workflow-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .workflow-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .workflow-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .workflow-file {
+            font-size: 0.85em;
+            color: #718096;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 10px;
+        }
+
+        .workflow-nodes {
+            font-size: 0.9em;
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+
+        .workflow-tags {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 3px 10px;
+            background: #edf2f7;
+            border-radius: 12px;
+            font-size: 0.75em;
+            color: #4a5568;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #718096;
+        }
+
+        .no-results-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .packs-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .pack-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 N8N Workflows</h1>
+            <p class="subtitle">Biblioteca Completa de Automatizaciones</p>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-number" id="total-workflows">300</span>
+                    <span class="stat-label">Workflows</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" id="total-categories">27</span>
+                    <span class="stat-label">Categorías</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Packs</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-bar">
+            <input type="search" id="search" placeholder="🔍 Buscar workflows... (nombre, categoría, nodos, etc.)">
+        </div>
+
+        <div class="filters">
+            <strong>Filtrar por:</strong>
+            <div class="filter-tag active" data-filter="all">🌟 Todos</div>
+            <div class="filter-tag" data-filter="Comunicación">💬 Comunicación</div>
+            <div class="filter-tag" data-filter="IA-y-Automatización">🤖 IA</div>
+            <div class="filter-tag" data-filter="Bases-de-Datos">💾 Bases de Datos</div>
+            <div class="filter-tag" data-filter="Web-y-APIs">🌐 Web & APIs</div>
+            <div class="filter-tag" data-filter="Desarrollo">💻 Desarrollo</div>
+            <div class="filter-tag" data-filter="Contenido-Multimedia">🎨 Multimedia</div>
+        </div>
+
+        <div class="content">
+            <div class="packs-section">
+                <h2>📦 Packs Recomendados</h2>
+                <p>Colecciones curadas de workflows que funcionan bien juntos</p>
+                <div class="pack-card">
+                    <h3>📧 Email Automation Complete</h3>
+                    <p>Todo lo necesario para automatizar tu email: lectura, procesamiento, respuestas automáticas.</p>
+                </div>
+                <div class="pack-card">
+                    <h3>🤖 AI Content Generation</h3>
+                    <p>Workflows para generar contenido con IA: textos, análisis, y más.</p>
+                </div>
+                <div class="pack-card">
+                    <h3>📱 Social Media Manager</h3>
+                    <p>Automatiza redes sociales: publicación, respuestas y monitoreo.</p>
+                </div>
+            </div>
+
+            <div id="workflows-container"></div>
+            <div id="no-results" class="no-results hidden">
+                <div class="no-results-icon">🔍</div>
+                <h2>No se encontraron workflows</h2>
+                <p>Intenta con otros términos de búsqueda</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>📁 Ubicación: C:\Users\Usuario\Desktop\automations\workflows-organized</p>
+            <p>🔗 Fuente: <a href="https://github.com/oxbshw/ultimate-n8n-ai-workflows" target="_blank">Ultimate N8N AI Workflows</a></p>
+            <p>📅 Organizado: 2025-10-21</p>
+        </footer>
+    </div>
+
+    <script>
+        const workflowsData = {
+            "Comunicación/Email": [
+                {name: "Email Automation", file: "1234_Email_Auto.json", nodes: 5, tags: ["gmail", "automation"]},
+                // Más workflows...
+            ],
+            "IA-y-Automatización/OpenAI": [
+                {name: "Content Generator", file: "1235_Openai_Generate.json", nodes: 8, tags: ["ai", "content"]},
+            ],
+            // Más categorías...
+        };
+
+        const iconMap = {
+            "Comunicación": "💬",
+            "IA-y-Automatización": "🤖",
+            "Bases-de-Datos": "💾",
+            "Web-y-APIs": "🌐",
+            "Desarrollo": "💻",
+            "Contenido-Multimedia": "🎨",
+            "Procesamiento-Datos": "⚙️",
+            "Automatización": "🔄",
+            "Productividad": "📊",
+            "Utilidades": "🔧"
+        };
+
+        function getIcon(category) {
+            for (let key in iconMap) {
+                if (category.includes(key)) return iconMap[key];
+            }
+            return "📁";
+        }
+
+        function renderWorkflows() {
+            const container = document.getElementById('workflows-container');
+            container.innerHTML = '';
+
+            // Aquí iría el código para cargar workflows desde el filesystem
+            // Por ahora, mostrar estructura de ejemplo
+
+            const categories = [
+                {name: "Comunicación/Email", count: 8, workflows: []},
+                {name: "IA-y-Automatización/OpenAI", count: 2, workflows: []},
+                {name: "Bases-de-Datos/SQL", count: 4, workflows: []},
+            ];
+
+            categories.forEach(cat => {
+                const section = document.createElement('div');
+                section.className = 'category-section';
+                section.innerHTML = `
+                    <div class="category-header" onclick="toggleCategory(this)">
+                        <div class="category-icon">${getIcon(cat.name)}</div>
+                        <div class="category-title">${cat.name}</div>
+                        <div class="category-count">${cat.count} workflows</div>
+                    </div>
+                    <div class="workflows-grid">
+                        <div class="workflow-card">
+                            <div class="workflow-title">Ejemplo Workflow</div>
+                            <div class="workflow-file">1234_Example.json</div>
+                            <div class="workflow-nodes">📦 5 nodos</div>
+                            <div class="workflow-tags">
+                                <span class="tag">automation</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(section);
+            });
+        }
+
+        function toggleCategory(header) {
+            const grid = header.nextElementSibling;
+            grid.style.display = grid.style.display === 'none' ? 'grid' : 'none';
+        }
+
+        // Search functionality
+        document.getElementById('search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            // Implementar búsqueda
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+                // Implementar filtrado
+            });
+        });
+
+        renderWorkflows();
+    </script>
+</body>
+</html>

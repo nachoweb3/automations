@@ -1,0 +1,209 @@
+╔══════════════════════════════════════════════════════════════════╗
+║  RAG Workflow For Stock Earnings Report Analysis                 ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+═════════════════════════════════════════════════════════════════
+ 💡 CASOS DE USO PRÁCTICOS
+═════════════════════════════════════════════════════════════════
+
+1. 🤖 Generación de Contenido Automático
+   ─────────────────────────────────────────────────────────────
+   Genera artículos, posts, descripciones de productos automáticamente
+
+   📝 EJEMPLO REAL:
+   "Cada lunes a las 9am, genera un artículo de blog sobre tendencias tech usando IA local (Ollama)"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Configura trigger programado (lunes 9am)
+   2. Define el tema o keywords
+   3. Ollama genera contenido (gratis, sin límites)
+   4. Revisa y publica en tu blog/CMS
+
+2. 💬 Chatbot de Soporte Inteligente
+   ─────────────────────────────────────────────────────────────
+   Responde automáticamente preguntas de clientes usando IA
+
+   📝 EJEMPLO REAL:
+   "Cuando llega un email de soporte, la IA analiza la pregunta y genera una respuesta personalizada"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Email nuevo activa el workflow
+   2. IA (Ollama) analiza la consulta
+   3. Genera respuesta contextual
+   4. Envía email automático al cliente
+
+3. 📊 Análisis de Sentimiento
+   ─────────────────────────────────────────────────────────────
+   Analiza opiniones de clientes, reviews, feedback automáticamente
+
+   📝 EJEMPLO REAL:
+   "Procesa reviews de productos y clasifica como positivo/negativo/neutral"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Recibe review (webhook/email/form)
+   2. IA analiza sentimiento
+   3. Clasifica y guarda en Google Sheets
+   4. Alerta si hay reviews negativos
+
+4. 💾 Sincronización de Datos en Google Sheets
+   ─────────────────────────────────────────────────────────────
+   Mantén tus datos sincronizados entre sistemas
+
+   📝 EJEMPLO REAL:
+   "Cuando agregas un contacto en tu CRM, se copia automáticamente a Google Sheets"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Webhook/trigger detecta nuevo registro
+   2. Extrae información relevante
+   3. Crea/actualiza registro en Google Sheets
+   4. Confirma sincronización
+
+5. 📊 Dashboard Automático en Google Sheets
+   ─────────────────────────────────────────────────────────────
+   Actualiza métricas y reportes automáticamente
+
+   📝 EJEMPLO REAL:
+   "Cada hora actualiza tu hoja de métricas con datos frescos"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Trigger programado cada hora
+   2. Consulta APIs/bases de datos
+   3. Calcula métricas y KPIs
+   4. Actualiza Google Sheets con datos nuevos
+
+6. 🔄 Backup Automático de Datos
+   ─────────────────────────────────────────────────────────────
+   Respalda información crítica regularmente
+
+   📝 EJEMPLO REAL:
+   "Cada noche exporta datos importantes a Google Sheets como backup"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Trigger programado (ej: 2am diario)
+   2. Extrae datos de sistema principal
+   3. Formatea y limpia datos
+   4. Guarda en Google Sheets con timestamp
+
+7. ⚙️ ETL y Procesamiento de Datos
+   ─────────────────────────────────────────────────────────────
+   Extrae, transforma y carga datos entre sistemas
+
+   📝 EJEMPLO REAL:
+   "Convierte datos de ventas en formato compatible y los importa a analytics"
+
+   🔧 CÓMO IMPLEMENTARLO:
+   1. Extrae datos de sistema origen
+   2. Transforma formato (filtros, cálculos)
+   3. Valida y limpia datos
+   4. Carga en sistema destino
+
+🔄 WORKFLOW CONVERTIDO A GRATIS
+
+📁 Archivo original: 1279_Googledocs_Manual_Automate_Triggered.json
+📂 Categoría: IA-Convertida-a-Gratis
+💰 Estado: Convertible a 100% GRATIS
+
+═════════════════════════════════════════════════════════════════
+ CONVERSIONES NECESARIAS
+═════════════════════════════════════════════════════════════════
+
+1. REEMPLAZAR: OPENAI
+   ❌ Servicio de pago: openai
+   ✅ Alternativa GRATIS: Ollama (LLM local gratuito)
+
+   📖 INSTRUCCIONES:
+   Instala Ollama localmente (gratis) o usa Hugging Face API (plan gratuito)
+
+   🔗 Más info: https://ollama.ai
+
+   🔧 CAMBIO EN N8N:
+   • Nodo original: n8n-nodes-base.openai
+   • Nuevo nodo: n8n-nodes-base.httpRequest
+   • Nueva configuración:
+     - url: http://localhost:11434/api/generate
+     - method: POST
+
+   ─────────────────────────────────────────────────────────────
+
+═════════════════════════════════════════════════════════════════
+ PASOS PARA CONVERTIR A GRATIS
+═════════════════════════════════════════════════════════════════
+
+📥 PASO 1: Importar el workflow original
+   1. Abre n8n → http://localhost:5678
+   2. Importa: 1279_Googledocs_Manual_Automate_Triggered.json
+
+🔧 PASO 2: Realizar conversiones
+   1. openai → Ollama (LLM local gratuito)
+
+⚙️  PASO 3: Configurar servicios gratuitos
+   • Instala/configura las alternativas gratuitas
+   • Actualiza credenciales en n8n
+   • Ajusta endpoints y configuraciones
+
+✅ PASO 4: Probar y activar
+   • Ejecuta el workflow manualmente
+   • Verifica que funciona correctamente
+   • Activa el workflow
+
+═════════════════════════════════════════════════════════════════
+ NODOS DEL WORKFLOW ORIGINAL
+═════════════════════════════════════════════════════════════════
+
+▸ @n8n/n8n-nodes-langchain.agent
+  └─ AI Agent
+▸ @n8n/n8n-nodes-langchain.documentDefaultDataLoader
+  └─ Default Data Loader
+▸ @n8n/n8n-nodes-langchain.embeddingsGoogleGemini
+  └─ Embeddings Google Gemini
+  └─ Embeddings Google Gemini (retrieval)
+▸ @n8n/n8n-nodes-langchain.lmChatGoogleGemini
+  └─ Google Gemini Chat Model1
+▸ @n8n/n8n-nodes-langchain.lmChatOpenAi
+  └─ OpenAI Chat Model
+▸ @n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter
+  └─ Recursive Character Text Splitter
+▸ @n8n/n8n-nodes-langchain.toolVectorStore
+  └─ Vector Store Tool
+▸ @n8n/n8n-nodes-langchain.vectorStorePinecone
+  └─ Pinecone Vector Store
+  └─ Pinecone Vector Store (Retrieval)
+▸ googleDocs
+  └─ Save Report to Google Docs
+▸ googleDrive
+  └─ Download File From Google Drive
+▸ googleSheets
+  └─ List Of Files To Load (Google Sheets)
+▸ manualTrigger
+  └─ When clicking ‘Test workflow’
+▸ splitInBatches
+  └─ Loop Over Items
+▸ stickyNote
+  └─ Sticky Note
+  └─ Sticky Note1
+  └─ Sticky Note2
+
+═════════════════════════════════════════════════════════════════
+ BENEFICIOS DE LA CONVERSIÓN
+═════════════════════════════════════════════════════════════════
+
+💰 AHORRO DE DINERO:
+   • openai: Ahorras $$$/mes
+
+🔓 VENTAJAS ADICIONALES:
+   ✓ Sin límites restrictivos
+   ✓ Mayor control de datos
+   ✓ Sin dependencia de servicios externos
+   ✓ Solución sostenible a largo plazo
+
+═════════════════════════════════════════════════════════════════
+ RECURSOS ÚTILES
+═════════════════════════════════════════════════════════════════
+
+• Ollama (LLM local gratuito): https://ollama.ai
+
+═════════════════════════════════════════════════════════════════
+
+📅 Convertido: 2025-10-20
+🔗 Fuente: https://github.com/oxbshw/ultimate-n8n-ai-workflows

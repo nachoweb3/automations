@@ -1,0 +1,92 @@
+╔══════════════════════════════════════════════════════════════════╗
+║  Moving metrics from Google Sheets to Orbit                      ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📁 Archivo: 1153_GoogleSheets_Orbit_Automation.json
+📂 Categoría: Bases-de-Datos/Hojas-de-Cálculo
+🔢 ID: 1153
+
+═════════════════════════════════════════════════════════════════
+ DESCRIPCIÓN
+═════════════════════════════════════════════════════════════════
+
+
+📊 Total de nodos: 6
+🏷️  Keywords: googlesheets, orbit, automation
+
+═════════════════════════════════════════════════════════════════
+ CASOS DE USO
+═════════════════════════════════════════════════════════════════
+
+1. Sincronizar datos entre sistemas
+2. Automatizar backups y exportaciones
+3. Procesar y transformar datos en lotes
+
+═════════════════════════════════════════════════════════════════
+ NODOS UTILIZADOS (6 total)
+═════════════════════════════════════════════════════════════════
+
+▸ googleSheets
+  └─ Get Members
+  └─ Get Activities
+▸ merge
+  └─ Merge
+▸ orbit
+  └─ Add Members
+  └─ Get all members
+  └─ Add Activities
+
+═════════════════════════════════════════════════════════════════
+ CONFIGURACIÓN PASO A PASO
+═════════════════════════════════════════════════════════════════
+
+📥 PASO 1: Importar el workflow
+   1. Abre n8n en http://localhost:5678
+   2. Click en menú (☰) → "Import from File"
+   3. Selecciona: 1153_GoogleSheets_Orbit_Automation.json
+
+🔐 PASO 2: Configurar credenciales
+   1. Add Members
+      → Tipo: orbit
+      → Credencial requerida: orbitApi
+   2. Get all members
+      → Tipo: orbit
+      → Credencial requerida: orbitApi
+   3. Get Members
+      → Tipo: googleSheets
+      → Credencial requerida: googleSheetsOAuth2Api
+   4. Get Activities
+      → Tipo: googleSheets
+      → Credencial requerida: googleSheetsOAuth2Api
+   5. Add Activities
+      → Tipo: orbit
+      → Credencial requerida: orbitApi
+
+⚙️  PASO 3: Configurar parámetros
+   • Revisa cada nodo y ajusta los parámetros según tu caso
+   • Presta atención a:
+     - URLs y endpoints
+     - Nombres de archivos y rutas
+     - IDs de recursos (channels, grupos, etc.)
+     - Horarios (si usa schedule)
+
+▶️  PASO 4: Activar y probar
+   1. Guarda el workflow (Ctrl+S)
+   2. Activa el workflow (toggle en la esquina superior)
+   3. Prueba con el botón "Execute Workflow"
+   4. Revisa los logs para verificar ejecución
+
+═════════════════════════════════════════════════════════════════
+ TROUBLESHOOTING
+═════════════════════════════════════════════════════════════════
+
+❌ Si el workflow falla:
+   • Verifica que todas las credenciales estén configuradas
+   • Revisa que los servicios externos estén disponibles
+   • Comprueba los permisos de API/webhooks
+   • Consulta los logs de n8n para errores específicos
+
+═════════════════════════════════════════════════════════════════
+
+📅 Organizado: 2025-10-20
+🔗 Fuente: https://github.com/oxbshw/ultimate-n8n-ai-workflows
